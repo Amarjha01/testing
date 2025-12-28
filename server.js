@@ -7,6 +7,9 @@ const routes = express.Router()
 
 app.use(routes)
 
+app.get('/health', (req, res) => {
+  res.status(200).send('ok');
+});
 
 routes.get("/welcome" , (req , res)=>{
 res.status(200).json({
